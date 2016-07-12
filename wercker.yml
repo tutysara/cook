@@ -5,5 +5,7 @@ build:
         flags: --buildDrafts=true
 deploy:
   steps:
+    - install-packages:
+        packages: git ssh-client
     - lukevivier/gh-pages:
         token: $GIT_TOKEN
